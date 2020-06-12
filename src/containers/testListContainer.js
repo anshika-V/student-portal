@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom' ;
 import {
     getTestList
 } from '../actions';
@@ -10,8 +11,14 @@ class List extends Component {
     }
     render(){
         return (
-            <div>
-                <ul>{this.props.test[1]}</ul>
+            <div align="center">
+                <ul>
+                    <Link to="/test/">
+                        {this.props.test.map((value, index) => {
+                            return <button key={index}>{value}</button>
+                        })}
+                    </Link>
+                </ul>
             </div>
         )
     }

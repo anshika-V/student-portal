@@ -12,7 +12,7 @@ export default function (state=defaultState,actions){
         case GET_TEST_LIST :
             return {
                 ...state,
-                test : [...state.test,...actions.payload]
+                test : [...actions.payload]
             };
         default :
             return state ;

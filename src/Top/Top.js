@@ -19,21 +19,23 @@ function Top(props) {
 	);*/
 	return (
 		<div id={styles.topBar} className="d-flex flex-row align-items-center col-12 pl-2  text-light">
-			<Nav />
 			<h1 className="display-3 ml-2 text-dark" id={styles.edu} onClick={() => window.location.assign('/')} align="center">
-				eduHub
-			</h1>  <Notiification />  <UserBtn />
+				eduHub--
+			</h1> 
+			<Nav/>
+			<Notiification />  
+			<UserBtn /> 
+	
 		</div>
 	);
 }
 
-/*const mapStateToProps = null;
+const mapStateToProps = null;
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		updateProfile: (data) => dispatch(updateProfile(data))
+		//updateProfile: (data) => dispatch(updateProfile(data))
 	};
-};*/
+};
 
-//export default connect(mapStateToProps, mapDispatchToProps)(Top);
-export default Top;
+export default connect(mapStateToProps, mapDispatchToProps)(Top);
